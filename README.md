@@ -184,8 +184,8 @@ This configuration file dictates how GRUB will boot your system.
 ```
 serial
 terminal_input serial
-terminal_output
-serial set root=(hd0,1)
+terminal_output serial
+set root=(hd0,1)
 menuentry "MiniLinux-From-Scratch" {
   linux /boot/vmlinuz root=/dev/sda1 console=ttyS0
 }
