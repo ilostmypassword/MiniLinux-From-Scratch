@@ -17,7 +17,11 @@ A simple tutorial to create a small, self-contained Linux distribution derived f
 
 ```
 $ make defconfig
-$ make
+$ scripts/config --set-val CONFIG_BPF_SYSCALL y
+$ scripts/config --set-val CONFIG_BPF_LSM y
+$ scripts/config --set-val CONFIG_DEBUG_INFO_BTF y
+$ make olddefconfig 
+$ make -j$(nproc)
 ```
 
 This process generates the kernel binary using the default configuration settings.
