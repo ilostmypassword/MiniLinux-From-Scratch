@@ -99,9 +99,7 @@ This pulls a lightweight Alpine container image and mounts it to your working di
 **The following steps are performed in Docker after the `docker run` command. We configure Alpine with a minimal system, basic utilities, and a C compiler** :
 
 ```
-$ apk add openrc
-$ apk add util-linux
-$ apk add build-base
+$ apk add openrc util-linux build-base clang llvm bpftool libbpf-dev linux-headers
 ```
 
 These commands install essential packages for system initialization and development.
