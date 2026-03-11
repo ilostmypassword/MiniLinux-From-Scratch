@@ -17,10 +17,13 @@ A simple tutorial to create a small, self-contained Linux distribution derived f
 
 ```
 $ make defconfig
-$ scripts/config --set-val CONFIG_BPF_SYSCALL y
-$ scripts/config --set-val CONFIG_BPF_LSM y
-$ scripts/config --set-val CONFIG_DEBUG_INFO_BTF y
-$ make olddefconfig 
+$ scripts/config --set-val CONFIG_BPF_SYSCALL y #this is optional
+$ scripts/config --set-val CONFIG_BPF_LSM y #this is optional
+$ scripts/config --set-val CONFIG_DEBUG_INFO_BTF y #this is optional
+$ scripts/config --set-val CONFIG_FUNCTION_TRACER y #this is optional
+$ scripts/config --set-val CONFIG_DYNAMIC_FTRACE y #this is optional
+$ scripts/config --set-val CONFIG_DYNAMIC_FTRACE_WITH_REGS y #this is optional
+$ make olddefconfig #this is optional
 $ make -j$(nproc)
 ```
 
